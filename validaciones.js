@@ -21,8 +21,15 @@ const submitForm = (e) => {
 
 function validar_nombre_usuario(string) {
 	// const regexp = /^[A-Z]{1}([a-zA-Z]){2,12}$/g;
-	const regexp =
-		/\b([A-Z]{1}[a-z]{1,30}[- ]{0,1}|[A-Z]{1}[- \']{1}[A-Z]{0,1}[a-z]{1,30}[- ]{0,1}|[a-z]{1,2}[ -\']{1}[A-Z]{1}[a-z]{1,30}){2,5}/;
+	// const regexp =
+	// 	/\b([A-Z]{1}[a-z]{1,30}[- ]{0,1}|[A-Z]{1}[- \']{1}[A-Z]{0,1}[a-z]{1,30}[- ]{0,1}|[a-z]{1,2}[ -\']{1}[A-Z]{1}[a-z]{1,30}){2,5}/;
+	const regexp = /^[A-Z]{1}[a-z]*(\s[A-Z]{1}[a-z]*)*\S$/g;
+
+	for (let i = 0; i < 10; i++) {
+		if (string.includes(i)) {
+			return true;
+		}
+	}
 
 	if (string.length === 0) return false;
 
