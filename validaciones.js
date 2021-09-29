@@ -1,11 +1,3 @@
-function validar_edad_usuario(edad){
-    var edad2 = edad.value
-    
-    if (edad2 > 13 && edad2 < 110){   
-        return true
-    }
-    
-    
 const myForm = document.getElementById("form_nuevo_usuario");
 const nombreUsuario = document.getElementById("dato_nombre_usuario");
 const edad = document.getElementById("dato_nombre_usuario");
@@ -60,3 +52,4 @@ function validar_edad_usuario(edad) {
 myForm.addEventListener("submit", submitForm);
 
 module.exports.validar_edad_usuario = validar_edad_usuario;
+module.exports.validar_nombre_usuario = validar_nombre_usuario;
