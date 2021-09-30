@@ -1,20 +1,15 @@
 const myForm = document.getElementById("form_nuevo_usuario");
 const nombreUsuario = document.getElementById("dato_nombre_usuario");
 const edad = document.getElementById("dato_nombre_usuario");
+const pasword=document.getElementById("dato_contrasena");
 
 const submitForm = (e) => {
 	e.preventDefault();
-
-	if (
-		validar_nombre_usuario(nombreUsuario.value) &&
-		validar_edad_usuario(edad.value)
-	) {
+	if (validar_nombre_usuario(nombreUsuario.value) && validar_edad_usuario(edad.value) && dato_contrasena(pasword.value)) {
 		console.info("Informacion validada con exito");
-
 		return true;
 	} else {
 		console.info("los datos son incorrectos");
-
 		return false;
 	}
 };
@@ -48,9 +43,17 @@ function validar_edad_usuario(edad) {
 		return true;
 	}
 }
+function validar_contrasena(string){
+	const regexp = /[A-Z0-9]{6}$/g;
+	if(regexp.test(string)){
+		console.log(`contraseña valida ${string}`);
+		return true;
+	}
+	return false;
+}
 
 myForm.addEventListener("submit", submitForm);
 
-module.exports.validar_edad_usuario = validar_edad_usuario;
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_edad_usuario = validar_edad_usuario;
+module.exports.validar_contrasena=validar_contrasena;
