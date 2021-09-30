@@ -44,7 +44,7 @@ function validar_edad_usuario(edad) {
 	}
 }
 function validar_contrasena(string){
-	const regexp = /[A-Z0-9]{6}$/g;
+	const regexp = /\w{6}/g;
 	if(regexp.test(string)){
 		console.log(`contraseña valida ${string}`);
 		return true;
