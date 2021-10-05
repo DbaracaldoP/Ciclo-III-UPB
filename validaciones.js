@@ -14,6 +14,8 @@ const submitForm = (e) => {
 		validar_contrasena(password.value)
 	) {
 		agregarRegistro();
+		myForm.reset();
+		nombreUsuario.focus();
 		return true;
 	} else {
 		return false;
