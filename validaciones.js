@@ -70,6 +70,8 @@ function agregarRegistro() {
 
 myForm.addEventListener("submit", submitForm);
 
+module.exports.registros = registros;
+module.exports.agregarRegistro = agregarRegistro;
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_edad_usuario = validar_edad_usuario;
 module.exports.validar_contrasena = validar_contrasena;
