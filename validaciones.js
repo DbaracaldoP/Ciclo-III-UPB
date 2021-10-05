@@ -7,7 +7,7 @@ const password = document.getElementById("dato_contrasena");
 
 const submitForm = (e) => {
 	e.preventDefault();
-	console.log(nombreUsuario.value, edad.value, password.value);
+
 	if (
 		validar_nombre_usuario(nombreUsuario.value) &&
 		validar_edad_usuario(edad.value) &&
